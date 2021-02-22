@@ -18,7 +18,7 @@ const admin = require("./routes/routes")
         app.use(express.static('views/images'));
     // Mongoose
         mongoose.Promise = global.Promise;
-        mongoose.connect("mongodb+srv://antonio:abnerebella@clusterstock.vlxew.mongodb.net/stock?retryWrites=true&w=majority", { 
+        mongoose.connect("mongodb+srv://user:psw@cluster.vlxew.mongodb.net/stock?retryWrites=true&w=majority", { 
         useNewUrlParser: true,
         useUnifiedTopology: true, }).then(()=>{
         console.log("conectado");
