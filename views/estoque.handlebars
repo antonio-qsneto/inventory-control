@@ -1,0 +1,54 @@
+<div class="container espaco">
+    <div>
+        <br>
+        <h1>Area de estoque</h1>
+        <br>
+        <hr>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg btn-block" id="button"> Cadastrar Produto </button>
+
+</div>
+
+
+
+<div class="bg-modal">
+    <div class="modal-content">
+
+        <div class="close">+</div>
+
+        <form action="/admin/estoque/add" method="POST">
+            <div class="form-group">
+                <label>Produto</label>
+                <input type="text" class="form-control" name="produto" placeholder="Entre com o produto">
+
+            </div>
+            <div class="form-group">
+                <label>Valor de Compra</label>
+                <input type="text" class="form-control" name="valor_compra" placeholder="Valor de Compra">
+            </div>
+
+            <div class="form-group">
+                <label>Valor de Venda</label>
+                <input type="text" class="form-control" name="valor_venda" placeholder="Valor de Venda">
+            </div>
+
+            <div class="form-group">
+                <label>Quantidade</label>
+                <input type="text" class="form-control" name="quant_pecas" placeholder="Quantidade de Peças">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    document.getElementById("button").addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display = 'flex';
+    });
+
+    document.querySelector('.close').addEventListener('click', () => {
+        document.querySelector('.bg-modal').style.display = "none";
+    });
+</script>
