@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const { MongoServerSelectionError } = require("mongodb")
 const mongoose = require("mongoose")
 const path = require("path")
-const port = 8080
+const port = process.env.PORT || 8000
 const admin = require("./routes/routes")
 
 // Configs
